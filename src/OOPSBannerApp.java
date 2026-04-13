@@ -4,12 +4,15 @@ public class OOPSBannerApp {
 
         CharacterPatterns cp = new CharacterPatterns();
 
-        cp.printO();
-        System.out.print("   ");
-        cp.printO();
-        System.out.print("   ");
-        cp.printP();
-        System.out.print("   ");
-        cp.printS();
+        cp.printCharacter('O');
+        System.out.println();
+
+        cp.printCharacter('O');
+        System.out.println();
+
+        cp.printCharacter('P');
+        System.out.println();
+
+        cp.printCharacter('S');
     }
 }

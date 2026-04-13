@@ -1,32 +1,47 @@
+import java.util.HashMap;
+
 public class CharacterPatterns {
 
-    public void printO() {
-        System.out.println("*****");
-        System.out.println("*   *");
-        System.out.println("*   *");
-        System.out.println("*   *");
-        System.out.println("*   *");
-        System.out.println("*   *");
-        System.out.println("*****");
+    private HashMap<Character, String[]> patterns = new HashMap<>();
+
+    public CharacterPatterns() {
+
+        patterns.put('O', new String[]{
+                "*****",
+                "*   *",
+                "*   *",
+                "*   *",
+                "*   *",
+                "*   *",
+                "*****"
+        });
+
+        patterns.put('P', new String[]{
+                "*****",
+                "*   *",
+                "*   *",
+                "*****",
+                "*",
+                "*",
+                "*"
+        });
+
+        patterns.put('S', new String[]{
+                "*****",
+                "*",
+                "*",
+                "*****",
+                "    *",
+                "    *",
+                "*****"
+        });
     }
 
-    public void printP() {
-        System.out.println("*****");
-        System.out.println("*   *");
-        System.out.println("*   *");
-        System.out.println("*****");
-        System.out.println("*");
-        System.out.println("*");
-        System.out.println("*");
-    }
+    public void printCharacter(char ch) {
+        String[] pattern = patterns.get(ch);
 
-    public void printS() {
-        System.out.println("*****");
-        System.out.println("*");
-        System.out.println("*");
-        System.out.println("*****");
-        System.out.println("    *");
-        System.out.println("    *");
-        System.out.println("*****");
+        for (String line : pattern) {
+            System.out.println(line);
+        }
     }
 }
