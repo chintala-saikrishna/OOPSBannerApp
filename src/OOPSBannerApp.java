@@ -12,14 +12,24 @@ public class OOPSBannerApp {
 
         char[] word = input.toCharArray();
 
+        // Validate characters
+        for (char ch : word) {
+            if (!cp.hasCharacter(ch)) {
+                System.out.println("Warning: '" + ch + "' not supported");
+            }
+        }
+
+        System.out.println();
+
+        // Print banner
         for (int i = 0; i < 7; i++) {
             for (char ch : word) {
-                String[] pattern = cp.getPattern(ch);
 
-                if (pattern != null) {
+                if (cp.hasCharacter(ch)) {
+                    String[] pattern = cp.getPattern(ch);
                     System.out.print(pattern[i] + "   ");
                 } else {
-                    System.out.print("       "); // for unknown chars
+                    System.out.print("       ");
                 }
             }
             System.out.println();

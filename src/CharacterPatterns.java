@@ -37,16 +37,11 @@ public class CharacterPatterns {
         });
     }
 
-    public void printCharacter(char ch) {
-        String[] pattern = patterns.get(ch);
-
-        for (String line : pattern) {
-            System.out.println(line);
-        }
-    }
-
-    // 🔥 NEW METHOD (for UC6)
     public String[] getPattern(char ch) {
         return patterns.get(ch);
+    }
+
+    public boolean hasCharacter(char ch) {
+        return patterns.containsKey(ch);
     }
 }
