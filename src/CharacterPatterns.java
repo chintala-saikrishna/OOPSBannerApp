@@ -44,4 +44,9 @@ public class CharacterPatterns {
             System.out.println(line);
         }
     }
+
+    // 🔥 NEW METHOD (for UC6)
+    public String[] getPattern(char ch) {
+        return patterns.get(ch);
+    }
 }
